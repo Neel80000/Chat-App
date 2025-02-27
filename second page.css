@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex; /* Use flexbox to arrange sections horizontally */
+    height: 100vh; /* Full height of the viewport */
+    position: relative; /* Position relative for the divider */
+}
+
+.section {
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.section1 {
+    flex: 2; /* Left section takes 2 parts */
+    background-color: #777171; /* Green background */
+    color: white;
+    min-width: 350px; /* Set the minimum width for the left section */
+}
+
+.section2 {
+    flex: 10; /* Right section takes 10 parts */
+    background-color: #ece1e1; /* Blue background */
+    color: rgb(0, 0, 0);
+    min-width: 100px; /* Minimum width for the right section */
+    max-width:1119px;
+}
+
+.divider {
+    width: 5px; /* Width of the divider */
+    background-color: #fff; /* Color of the divider */
+    cursor: ew-resize; /* Cursor style for resizing */
+    position: absolute; /* Position absolute for the divider */
+    top: 0;
+    bottom: 0;
+    left: 350px; /* Initial position of the divider */
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+    width: calc(100% - 16px); /* Full width minus padding */
+    padding: 8px; /* Add padding to the search box */
+}
+
+.searchButton {
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%);
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/* Hover effect */
+.searchButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/* Button pressing effect */
+.searchButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+    flex: 1; /* Allow the input to take the remaining space */
+}
+
+/* new element  */
+/* From Uiverse.io by mi-series */ 
+.button {
+    width: 150px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5cdb95;
+    margin-left: 400px;
+    margin-top: 300px;
+  }
+  
+  .button span {
+    background: #f1f5f8;
+    display: flex;
+    padding-block: 9px;
+    padding-left: 10px;
+    padding-right: 9px;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+  }
+  
+  .button:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+  }
+  
+/* element ending */
