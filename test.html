@@ -8,12 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <div class="section left-section">Left Section</div>
+        <div class="section left-section">
+            <h1 id="chat-title">Select a chat from the right sidebar</h1>
+            <div id="chat-window">
+                <p>Chat messages will appear here.</p>
+            </div>
+        </div>
         <div class="divider" id="divider">
             <div class="drag-handle"></div>
             <div class="horizontal-bar"></div>
         </div>
-        <div class="section right-section">Right Section</div>
+        <div class="section right-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="chat-item"><a href="#" onclick="selectChat('Alice')">Alice</a></li>
+                    <li class="chat-item"><a href="#" onclick="selectChat('Bob')">Bob</a></li>
+                    <li class="chat-item"><a href="#" onclick="selectChat('Charlie')">Charlie</a></li>
+                    <li class="chat-item"><a href="#" onclick="selectChat('Diana')">Diana</a></li>
+                    <li class="chat-item"><a href="#" onclick="selectChat('Eve')">Eve</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <script src="test.js"></script>
 </body>

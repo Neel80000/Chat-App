@@ -20,21 +20,10 @@ body {
 
 .left-section {
     background-color: #1e1e1e; /* Darker background for left section */
-    width: 50%;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .right-section {
     background-color: #2a2a2a; /* Darker background for right section */
-    width: 50%;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Deeper and darker shadow */
-    transition: transform 0.3s ease; /* Optional: Add transition for hover effect */
-}
-
-.right-section:hover {
-    transform: translateY(-5px); /* Optional: Lift effect on hover */
 }
 
 .divider {
@@ -78,4 +67,40 @@ body {
 
 .divider:hover .horizontal-bar {
     opacity: 1; /* Show the horizontal bar */
+}
+
+.navbar {
+    flex-grow: 1; /* Allow navbar to take remaining space */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.chat-item {
+    margin: 10px 0; /* Space between items */
+}
+
+.chat-item a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    padding: 10px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    display: block; /* Make the link a block element */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.chat-item a:hover {
+    background-color: #2a2a2a; /* Darker background on hover */
+}
+
+#chat-window {
+    margin-top: 20px; /* Space above chat window */
+    padding: 10px;
+    background-color: #1e1e1e; /* Dark background for chat window */
+    border-radius: 5px; /* Rounded corners */
+    height: calc(100% - 40px); /* Adjust height to fit within the section */
+    overflow-y: auto; /* Enable scrolling for chat messages */
 }

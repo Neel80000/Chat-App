@@ -2,6 +2,11 @@ const dragHandle = document.querySelector('.drag-handle');
 const container = document.querySelector('.container');
 let isDragging = false;
 
+function selectChat(name) {
+    document.getElementById('chat-title').innerText = `Chat with ${name}`;
+    document.getElementById('chat-window').innerHTML = `<p>This is the chat window for ${name}.</p>`;
+}
+
 dragHandle.addEventListener('mousedown', (e) => {
     isDragging = true;
     e.preventDefault(); // Prevent text selection
