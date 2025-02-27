@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    position: relative; /* Position relative for absolute positioning of the divider */
+}
+
+.section {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-section {
+    background-color: #f0f0f0;
+}
+
+.right-section {
+    background-color: #d0d0d0;
+}
+
+.divider {
+    width: 30px; /* Width of the divider */
+    background-color: transparent; /* Transparent background */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    bottom: 0; /* Align to the bottom */
+    left: 50%; /* Center it */
+    transform: translateX(-50%); /* Center it */
+    display: flex; /* Flexbox for centering the drag handle */
+    align-items: center; /* Center vertically */
+}
+
+/* Drag handle */
+.drag-handle {
+    width: 10px; /* Width of the drag handle */
+    height: 30px; /* Height of the drag handle */
+    background-color: #333; /* Color of the drag handle */
+    border-radius: 5px; /* Rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Horizontal bar */
+.horizontal-bar {
+    width: 30px; /* Width of the horizontal bar */
+    height: 2px; /* Height of the horizontal bar */
+    background-color: #333; /* Color of the horizontal bar */
+    position: absolute; /* Position it absolutely */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Center it */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Show the drag handle and horizontal bar on hover over the divider */
+.divider:hover .drag-handle {
+    opacity: 1; /* Show the drag handle */
+}
+
+.divider:hover .horizontal-bar {
+    opacity: 1; /* Show the horizontal bar */
+}
