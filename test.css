@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     height: 100vh;
+    color: #ffffff;
+    background-color: #121212;
 }
 
 .container {
@@ -17,11 +19,22 @@ body {
 }
 
 .left-section {
-    background-color: #f0f0f0;
+    background-color: #1e1e1e; /* Darker background for left section */
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .right-section {
-    background-color: #d0d0d0;
+    background-color: #2a2a2a; /* Darker background for right section */
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Deeper and darker shadow */
+    transition: transform 0.3s ease; /* Optional: Add transition for hover effect */
+}
+
+.right-section:hover {
+    transform: translateY(-5px); /* Optional: Lift effect on hover */
 }
 
 .divider {
@@ -38,9 +51,9 @@ body {
 
 /* Drag handle */
 .drag-handle {
-    width: 10px; /* Width of the drag handle */
-    height: 30px; /* Height of the drag handle */
-    background-color: #333; /* Color of the drag handle */
+    width: 20px; /* Width of the drag handle */
+    height: 40px; /* Height of the drag handle */
+    background-color: #b0afaf; /* Color of the drag handle */
     border-radius: 5px; /* Rounded corners */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Smooth transition for opacity */
@@ -48,9 +61,9 @@ body {
 
 /* Horizontal bar */
 .horizontal-bar {
-    width: 30px; /* Width of the horizontal bar */
-    height: 2px; /* Height of the horizontal bar */
-    background-color: #333; /* Color of the horizontal bar */
+    width: 40px; /* Width of the horizontal bar */
+    height: 6px; /* Height of the horizontal bar */
+    background-color: #b0afaf; /* Color of the horizontal bar */
     position: absolute; /* Position it absolutely */
     top: 50%; /* Center it vertically */
     transform: translateY(-50%); /* Center it */
